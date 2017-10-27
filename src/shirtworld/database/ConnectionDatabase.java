@@ -9,7 +9,7 @@ public class ConnectionDatabase {
 	
 	private static final String USER_NAME = "root"; 
 	private static final String DB_NAME = "shirtworld";
-	private static final String PASSWORD = "root";
+	private static final String PASSWORD = "23225190";
 	private static final String SERVER_IP = "localhost"; 
 	private static final String URL = "jdbc:mysql://"+ SERVER_IP + "/" + DB_NAME; 
 	private static Connection connection = null;
