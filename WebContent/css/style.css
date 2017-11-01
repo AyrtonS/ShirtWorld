@@ -3,14 +3,18 @@
 *{
 	font-family: 'Abel', sans-serif;
 }
-
-#menu-icon{
-	padding: 25%;
-}
-
 #logo{
 	font-family: 'Indie Flower', cursive;
-	color:#000;
-	margin:1%;
-	font-size: 2.5em;
+	color:#FFF;
+	font-size: 3em;
 }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+      
