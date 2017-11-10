@@ -7,14 +7,16 @@ public class Usuario {
 	private String cpf;
 	private String email;
 	private String senha;
-	private Carrinho carrinho;
+	private int carrinhoId;
 	
-	public Carrinho getCarrinho() {
-		return carrinho;
+
+	public int getCarrinhoId() {
+		return carrinhoId;
 	}
-	public void setCarrinho(Carrinho carrinho) {
-		this.carrinho = carrinho;
+	public void setCarrinhoId(int carrinhoId) {
+		this.carrinhoId = carrinhoId;
 	}
+	
 	public String getNome() {
 		return nome;
 	}
