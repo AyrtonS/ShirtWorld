@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+
+*{
+	font-family: 'Abel', sans-serif;
+}
+#logo{
+	font-family: 'Indie Flower', cursive;
+	color:#FFF;
+	font-size: 3em;
+}
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+      
+#login_button:hover{
+	background:#1a237e;
+	color:#fff;
+}      
