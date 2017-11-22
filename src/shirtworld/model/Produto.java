@@ -1,5 +1,6 @@
 package shirtworld.model;
 
+
 public class Produto extends Identificavel{
 
 	private String nome;

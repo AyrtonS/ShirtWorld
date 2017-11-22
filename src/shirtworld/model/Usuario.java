@@ -1,5 +1,6 @@
 package shirtworld.model;
 
+
 public class Usuario extends Identificavel {
 
 	private String login;
@@ -29,3 +30,6 @@ public class Usuario extends Identificavel {
 		this.senha = password;
 	}
 }
+
+
+
