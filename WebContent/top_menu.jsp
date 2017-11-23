@@ -19,7 +19,17 @@
 	rel="stylesheet">
 <script src="js/jquery-3.2.1.js"></script>
 <script src="css/materialize/js/materialize.js"></script>s
-
+ 
+ <script type="text/javascript">
+ $(document).ready(function(){
+ 
+ 		
+ $('select').material_select();
+ 
+ });
+ 
+ </script>
+ 
 </head>
 <body>
 
