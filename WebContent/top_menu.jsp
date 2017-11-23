@@ -129,7 +129,7 @@
 					class="material-icons right">arrow_drop_down</i></a></li>
 			<li><a class="black-text pulse" href="#categorias"><i
 					class="material-icons left ">reorder</i>Categorias</a></li>			
-			<li><a class="black-text pulse" href="sass.html"><i
+			<li><a class="black-text pulse" href="customize.jsp"><i
 					class="material-icons left ">control_point</i> Encomendar / Personalizar</a></li>		
 					
 			<li><a class="black-text pulse" href="sass.html">
