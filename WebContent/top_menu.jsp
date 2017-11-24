@@ -18,7 +18,7 @@
 <link href="https://fonts.googleapis.com/css?family=Indie+Flower"
 	rel="stylesheet">
 <script src="js/jquery-3.2.1.js"></script>
-<script src="css/materialize/js/materialize.js"></script>s
+<script src="css/materialize/js/materialize.js"></script>
  
  <script type="text/javascript">
  $(document).ready(function(){
@@ -116,6 +116,9 @@
    
   </ul>
 
+
+
+
 	<nav>
 	<div class="nav-wrapper white ">
 		<ul class="right hide-on-med-and-down black-text">
@@ -134,7 +137,7 @@
 					
 			<li><a class="black-text pulse" href="sass.html">
 			<i class="material-icons left">mail</i>Contato</a></li>
-			<li><a class="black-text  " href="sass.html">
+			<li><a class="black-text  " href="carrinho.jsp">
 			<i class="material-icons left ">shopping_cart</i>R$ 0,00 <span class="badge">Vazio</span></a></li>
 		</ul>
 	</div>
