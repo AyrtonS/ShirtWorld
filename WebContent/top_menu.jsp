@@ -2,9 +2,34 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+
+
+
+<link rel="stylesheet" href="css/materialize/css/materialize.css">
+<link href="https://fonts.googleapis.com/css?family=Abel"
+	rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower"
+	rel="stylesheet">
+<script src="js/jquery-3.2.1.js"></script>
+<script src="css/materialize/js/materialize.js"></script>
+ 
+ <script type="text/javascript">
+ $(document).ready(function(){
+ 
+ 		
+ $('select').material_select();
+ 
+ });
+ 
+ </script>
+ 
 </head>
 <body>
 
@@ -91,12 +116,15 @@
    
   </ul>
 
+
+
+
 	<nav>
 	<div class="nav-wrapper white ">
 		<ul class="right hide-on-med-and-down black-text">
 			<li><a class="black-text pulse" href="index.jsp"><i
 					class="material-icons left ">home</i>Inicio</a></li>
-			<li><a class="black-text pulse" href="sass.html"><i
+			<li><a class="black-text pulse" href="about-us.jsp"><i
 					class="material-icons left">assignment</i>Sobre Nós</a></li>
 					
 			<li> <a class='dropdown-button btn black white-text pulse' href='#' data-activates='dropdown1'>
@@ -104,12 +132,12 @@
 					class="material-icons right">arrow_drop_down</i></a></li>
 			<li><a class="black-text pulse" href="#categorias"><i
 					class="material-icons left ">reorder</i>Categorias</a></li>			
-			<li><a class="black-text pulse" href="sass.html"><i
+			<li><a class="black-text pulse" href="customize.jsp"><i
 					class="material-icons left ">control_point</i> Encomendar / Personalizar</a></li>		
 					
 			<li><a class="black-text pulse" href="sass.html">
 			<i class="material-icons left">mail</i>Contato</a></li>
-			<li><a class="black-text  " href="sass.html">
+			<li><a class="black-text  " href="carrinho.jsp">
 			<i class="material-icons left ">shopping_cart</i>R$ 0,00 <span class="badge">Vazio</span></a></li>
 		</ul>
 	</div>
