@@ -8,11 +8,7 @@
 			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/marcus/eclipse-workspace/mysql-connector-java-5.1.44.jar"/>
-	<classpathentry kind="lib" path="/home/marcus/eclipse-workspace/taglibs-standard-compat-1.2.5.jar"/>
-	<classpathentry kind="lib" path="/home/marcus/eclipse-workspace/taglibs-standard-impl-1.2.5.jar"/>
-	<classpathentry kind="lib" path="/home/marcus/eclipse-workspace/taglibs-standard-jstlel-1.2.5.jar"/>
-	<classpathentry kind="lib" path="/home/marcus/eclipse-workspace/taglibs-standard-spec-1.2.5.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="mysql-connector-java-5.1.44"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

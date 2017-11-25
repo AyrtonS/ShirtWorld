@@ -3,7 +3,6 @@ package shirtworld.listeners;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
-import javax.sql.ConnectionEvent;
 
 import shirtworld.database.ConnectionDatabase;
 
@@ -26,6 +25,7 @@ public class DatabaseListener implements ServletContextListener {
      */
     public void contextDestroyed(ServletContextEvent arg0)  { 
          // TODO Auto-generated method stub
+    	
     	ConnectionDatabase.closeConnection();
     }
 
@@ -33,7 +33,11 @@ public class DatabaseListener implements ServletContextListener {
      * @see ServletContextListener#contextInitialized(ServletContextEvent)
      */
     public void contextInitialized(ServletContextEvent arg0)  { 
-         ConnectionDatabase.getConnection(); 
-         }
+         // TODO Auto-generated method stub
+    	
+    	ConnectionDatabase.getConnection();
+    	System.out.println(ConnectionDatabase.status);
+    	
+    }
 	
 }

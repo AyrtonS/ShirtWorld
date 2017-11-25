@@ -15,7 +15,7 @@ public class ConnectionDatabase {
 	private static final String SERVER_IP = "localhost"; 
 	private static final String URL = "jdbc:mysql://"+ SERVER_IP + "/" + DB_NAME; 
 	private static Connection connection = null;
-	static String status = "";
+	public static String status = "";
 	
 	public ConnectionDatabase() {
 		// TODO Auto-generated constructor stub
@@ -28,7 +28,7 @@ public class ConnectionDatabase {
 		String driverName = "com.mysql.jdbc.Driver";
 		
 		try {
-			
+			System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAA");
 			Class.forName(driverName);
 			connection = DriverManager.getConnection(URL, USER_NAME, PASSWORD);	
 			
