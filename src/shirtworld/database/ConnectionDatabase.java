@@ -62,7 +62,8 @@ public class ConnectionDatabase {
 		Class.forName("com.mysql.jdbc.Driver").newInstance();
 	}
 
-	public static ResultSet executeQuery(String sqlQuery, Connection conn) throws SQLException {
+	public static ResultSet executeQuery(String sqlQuery) throws SQLException {
+		Connection conn = getConnection();
 		Statement stmt = conn.createStatement();
 		return stmt.executeQuery(sqlQuery);
 	}

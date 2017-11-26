@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import shirtworld.model.Produto;
 import shirtworld.repository.ProdutoRepository;
 
-@WebServlet("/produto")
-public class ProdutoServlet extends HttpServlet {
+@WebServlet("/Produto")
+public class ProdutoServlet<T extends Comparable<T>> extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	public ProdutoServlet() {
@@ -25,16 +25,22 @@ public class ProdutoServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
+		String nome = request.getParameter("nome");
+		Float preco = Float.parseFloat(request.getParameter("preco"));
+		String descricao = request.getParameter("descricao");
 
-		Produto p = new Produto(request.getParameter("nome"), Float.parseFloat(request.getParameter("preco")));
+		Produto produto = new Produto(nome, preco, descricao);
+		
 		try {
-			ProdutoRepository.inserir(p);
-
+			boolean responseFromInsert = ProdutoRepository.inserir(produto);
+			request.setAttribute("message", responseFromInsert);
+			request.getRequestDispatcher("/admin").forward(request, response);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
-		response.getWriter().println(p);
+//		request.getRequestDispatcher("/admin").forward(request, response);
 	}
 
 }

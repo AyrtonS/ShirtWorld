@@ -13,11 +13,11 @@
 <div class="container">
 <h4>Adicionar Produto</h4>
 
-<form action="" method="post">
+<form action="../Produto" method="post">
 
 <div class="row">
 		<div class="input-field col s12">
-			<input id="nome" type="text" class="validate" required>
+			<input name="nome" id="nome" type="text" class="validate" required>
 			<label for="nome">Nome do Produto</label>
 		</div>
 </div>
@@ -25,7 +25,7 @@
 
 <div class="row">
 		<div class="input-field col s12">
-			<input id="preco" type="number" class="validate" required>
+			<input name="preco" id="preco" type="number" class="validate" required>
 			<label for="preco">Preço do Produto</label>
 		</div>
 </div>
@@ -33,14 +33,14 @@
 
 <div class="row">
 		<div class="input-field col s12">
-			<textarea id="textarea1" class="materialize-textarea"></textarea>
+			<textarea name="descricao" id="textarea1" class="materialize-textarea"></textarea>
           <label for="textarea1">Descrição do Produto</label>
 		</div>
 </div>
 
 <div class="row">
 		<div class="input-field col s12">
-			<a href="#" class="btn black white-text right"><i class="material-icons left">send</i> Salvar</a>
+			<button type="submit" class="btn black white-text right"><i class="material-icons left">send</i> Salvar</button>
 		</div>
 </div>
 
