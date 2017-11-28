@@ -6,18 +6,41 @@ import java.util.ArrayList;
 import java.util.List;
 
 import shirtworld.database.ConnectionDatabase;
+import shirtworld.model.Carrinho;
 import shirtworld.model.Produto;
 
 public class ProdutoRepository{
 
 	
-
 	public static boolean inserir(Produto produto) {
 
 		String sql = "insert into Produto" + " (nome,preco,descricao)" + " values ('" + produto.getNome() + "'," + produto.getPreco() + ",'"+produto.getDescricao()+"');";
 		try {
 			ConnectionDatabase.executeInsert(sql);
+			
+			
 			System.out.println("Gravado!");
+			return true;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return false;
+		}
+
+		
+		
+	}
+
+	public static boolean inserirProdutoEmCarrinho(Produto produto,Carrinho carrinho	) {
+
+		String sql = "insert into Produto" + " (nome,preco,descricao)" + " values ('" + produto.getNome() + "'," + produto.getPreco() + ",'"+produto.getDescricao()+"');";
+		try {
+			ConnectionDatabase.executeInsert(sql);
+			String sqlcart = "insert into carrinho_produto(carrinho_id,produto_id) "
+					+ "values ("+carrinho.getId()+","+produto.getId()+");";
+			
+			ConnectionDatabase.executeInsert(sqlcart);
+			
+			System.out.println("Gravado!"+produto.getId());
 			return true;
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -38,6 +61,9 @@ public class ProdutoRepository{
 				Produto produto;
 				while(rs.next()){
 					produto = new Produto(rs.getString("nome"), rs.getFloat("preco"),rs.getString("descricao"));
+					produto.setId(rs.getInt("id"));
+				
+					
 					produtos.add(produto);
 				}
 				

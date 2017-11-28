@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+   <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -56,13 +57,14 @@
 		
 		<div class="col l6" style="padding:7%;">
 				<h4 class="center">Realize o Login</h4>
-			 <form method="post">
+			 <form method="post" action="login">
+			
 			 
- 				<h6>Usuário : </h6><input value="" id="user" name="s" type="text" placeholder="Usuário">
-			    <h6>Senha : </h6><input value="" id="pass" name="s" type="password"  placeholder="Senha">
+ 				<h6>Usuário : </h6><input id="user" name="login" type="text" placeholder="Usuário">
+			    <h6>Senha : </h6><input id="pass" name="password" type="password"  placeholder="Senha">
 		
  				<button class="btn black white-text right" type="submit">LOG IN</button>
- 
+ 				Novo no site? <a href="cadastro.jsp">Cadastre-se</a>
  
  			</form>
 			

@@ -1,3 +1,7 @@
+<%@page import="shirtworld.model.Produto"%>
+<%@page import="java.util.List"%>
+<%@page import="shirtworld.repository.ProdutoRepository"%>
+<%@page import="shirtworld.database.ConnectionDatabase"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -84,31 +88,41 @@
 	
 	<div class="container">
 	<h4>Produtos Mais Acessados</h4>
+	<form action="carrinho" method="get">
       <div class="row">
-      <% for(int i=1;i<17;i++){ %>
-        <div class="col s12 m6 l3">
-          <div class="card">
+      <% List<Produto> produtos = ProdutoRepository.read(); %>
+      <% for(Produto produto : produtos){ %>
+        <div class="col s12 m6 l4">
+          <div class="card" style="padding:5%;">
             <div class="card-image">
               <img src="https://img.elo7.com.br/product/244x194/1A88987/camiseta-anime-dragon-ball-super-goku-black-full-hd-11-camisa-alta-resolucao.jpg">
-              <span class="card-title">Product name</span>
+              <span class="card-title"><%=produto.getNome() %></span>
             </div>
             <div class="card-content">
-              	<h5 style="color:#1a237e ">Product Name</h5>
-              	<h6>Product Price R$</h6>
-              	<p> DESCRIPTIOOOOOOOOOOOOOOONN</p>
-              		
+              	<h5 style="color:#1a237e "><%=produto.getNome() %></h5>
+              	<input name="nome" type="hidden" value="<%=produto.getNome() %>">
+              	<h6><b>Preço do Produto R$ <%=produto.getPreco() %></b></h6>
+              	<input name="preco" type="hidden" value="<%=produto.getPreco() %>">
+              	<p> <%=produto.getDescricao() %>
+              			<input name="descricao" type="hidden" value="<%=produto.getDescricao() %>">
+              			<input name="idProduto" type="hidden" value="<%=produto.getId() %>">
+              			<input name="idCart" type="hidden" value="${usuario.getCarrinhoId()}">
+              			</p>
+              		${usuario.getCarrinhoId()}
             </div>
             <div class="card-action">
               	<button type="submit" class="btn waves-effect  black" >
               	<i class="material-icons left">add_shopping_cart</i>
-              	Adicionar no Carrinho
+              	ADD NO CARRINHO
               	</button>
             </div>
           </div>
         </div>
         	
 	<%} %>
+	
       </div>
+      </form>
 	</div>
 	
 	

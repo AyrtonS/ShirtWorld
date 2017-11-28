@@ -2,7 +2,7 @@ package shirtworld.model;
 
 import java.util.List;
 
-public class Carrinho {
+public class Carrinho extends Identificavel{
 	
 	private double precoTotal;
 	private Usuario usuario;

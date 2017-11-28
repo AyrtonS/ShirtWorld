@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
@@ -41,8 +42,15 @@
 		
 			<div class="col l9"></div>
 			<div class="col l3">
+				<c:if test="${not empty usuario}">
+					<h5>Bem Vindo: ${usuario.getLogin()} <a class="btn indigo darken-4" href="logout">logout</a></h5>
+				
+				</c:if>
+				<c:if test="${empty usuario}">
 					<a href="login.jsp" id="login_button" class="btn black white-text right  hoverable">
 					<i class="material-icons left">perm_identity</i>Login / Cadastre-se</a>
+				</c:if>
+					
 			</div>
 	
 		</div>

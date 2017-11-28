@@ -1,10 +1,15 @@
 package shirtworld.listeners;
 
+import java.util.Random;
+
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
 import shirtworld.database.ConnectionDatabase;
+import shirtworld.model.Carrinho;
+import shirtworld.model.Usuario;
+import shirtworld.repository.UserRepository;
 
 /**
  * Application Lifecycle Listener implementation class DatabaseListener
@@ -37,6 +42,20 @@ public class DatabaseListener implements ServletContextListener {
     	
     	ConnectionDatabase.getConnection();
     	System.out.println(ConnectionDatabase.status);
+    	
+    	Usuario user = new Usuario("admin", "admin");
+    	Random random = new Random();   
+    	
+    	user.setId(random.nextInt(1000));
+    	
+    	if(UserRepository.checkUser(user) == null){
+    		Carrinho carrinho = UserRepository.getNewCart(user);
+    		UserRepository.insertUser(user,carrinho);
+    		System.out.println("Admin INSERIDO");
+    	}
+    	
+
+    	
     	
     }
 	
