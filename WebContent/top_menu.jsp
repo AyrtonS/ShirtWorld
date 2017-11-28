@@ -146,7 +146,7 @@
 			<li><a class="black-text pulse" href="sass.html">
 			<i class="material-icons left">mail</i>Contato</a></li>
 			<li><a class="black-text  " href="carrinho.jsp">
-			<i class="material-icons left ">shopping_cart</i>R$ 0,00 <span class="badge">Vazio</span></a></li>
+			<i class="material-icons left ">shopping_cart</i>R$ x,yz <span class="badge">Vazio</span></a></li>
 		</ul>
 	</div>
 	</nav>

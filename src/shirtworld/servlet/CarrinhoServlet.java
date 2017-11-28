@@ -50,6 +50,7 @@ public class CarrinhoServlet extends HttpServlet {
 		Carrinho carrinho = UserRepository.getCarrinho(user);
 		if(carrinho!=null){
 			ProdutoRepository.inserirProdutoEmCarrinho(produto, carrinho);
+			request.getRequestDispatcher("/carrinho.jsp").forward(request, response);
 		}
 		
 		

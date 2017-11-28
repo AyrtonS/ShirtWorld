@@ -6,7 +6,7 @@ public class Produto extends Identificavel{
 	private String nome;
 	private float preco;
 	private String descricao;
-
+	private int quantidade;
 	
 	
 	public Produto(String nome, float preco, String descricao) {
@@ -37,6 +37,14 @@ public class Produto extends Identificavel{
 
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+
+	public int getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
 	}
 
 

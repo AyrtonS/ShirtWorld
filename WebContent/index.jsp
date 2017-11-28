@@ -88,7 +88,7 @@
 	
 	<div class="container">
 	<h4>Produtos Mais Acessados</h4>
-	<form action="carrinho" method="get">
+	
       <div class="row">
       <% List<Produto> produtos = ProdutoRepository.read(); %>
       <% for(Produto produto : produtos){ %>
@@ -98,6 +98,7 @@
               <img src="https://img.elo7.com.br/product/244x194/1A88987/camiseta-anime-dragon-ball-super-goku-black-full-hd-11-camisa-alta-resolucao.jpg">
               <span class="card-title"><%=produto.getNome() %></span>
             </div>
+            <form action="carrinho" method="get">
             <div class="card-content">
               	<h5 style="color:#1a237e "><%=produto.getNome() %></h5>
               	<input name="nome" type="hidden" value="<%=produto.getNome() %>">
@@ -108,13 +109,14 @@
               			<input name="idProduto" type="hidden" value="<%=produto.getId() %>">
               			<input name="idCart" type="hidden" value="${usuario.getCarrinhoId()}">
               			</p>
-              		${usuario.getCarrinhoId()}
+              		
             </div>
             <div class="card-action">
               	<button type="submit" class="btn waves-effect  black" >
               	<i class="material-icons left">add_shopping_cart</i>
               	ADD NO CARRINHO
               	</button>
+              	</form>
             </div>
           </div>
         </div>
@@ -122,7 +124,7 @@
 	<%} %>
 	
       </div>
-      </form>
+      
 	</div>
 	
 	
@@ -139,7 +141,7 @@
     		<div class="col s12 m4 l3">
       			<div class="card">
         		<div class="card-image">
-         			<img src="images/sample-1.jpg">
+         			<img src="http://www.adirferreira.com.br/wp-content/uploads/2015/09/TV-Series.png">
           			<span class="card-title">Cadernos</span>
          			 <a class="btn-floating halfway-fab waves-effect waves-light indigo darken-4"><i class="material-icons">add</i></a>
         		</div>
