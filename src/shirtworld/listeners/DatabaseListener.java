@@ -44,6 +44,7 @@ public class DatabaseListener implements ServletContextListener {
     	System.out.println(ConnectionDatabase.status);
     	
     	Usuario user = new Usuario("admin", "admin");
+    	user.setAdmin(true);
     	Random random = new Random();   
     	
     	user.setId(random.nextInt(1000));
